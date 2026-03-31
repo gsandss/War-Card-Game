@@ -2,7 +2,11 @@
 
 /* General */
 body{   
-    background: linear-gradient(to bottom, #000000, #434343);
+    background-image: url("../style/images/background.png");
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-position 0.1s;
 }
 
 /* Header */
@@ -19,17 +23,18 @@ body{
     display: flex;
     justify-content: center; 
     font-family:fantasy;
-    text-shadow: #191212 2px 2px 4px;
+    text-shadow: #191212 4px 4px 6px;
 }
+
 
 .title-block {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 579.5px;
+    height: 700px;
 }
 
-/* Buttopn Block */
+/* Button Block */
 .button-block {
     display: flex;
     justify-content: center;
@@ -63,7 +68,7 @@ body{
 .playButton a{
     text-decoration: none;
     color: black;
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 1rem 1rem;
     width: 100px;
     border-radius: 8px;
@@ -78,7 +83,7 @@ body{
     margin-left: 20px;
     border-radius: 8px;
     padding: 10px 15px;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .optionsButton:hover{
@@ -98,7 +103,7 @@ body{
     margin-right: 20px;
     border-radius: 5px;
     padding: 10px 15px;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .rulesButton:hover{
