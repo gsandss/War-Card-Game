@@ -42,6 +42,10 @@ body{
 }
 
 .footer-block {
+<<<<<<< HEAD
+    color: white;
+=======
+>>>>>>> df0cdc6b77dd52533244c1f38ac3fb30720c67f1
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +68,13 @@ body{
 }
 .playButton:hover{
     transform: scale(1.1);
+<<<<<<< HEAD
+    background-color: red;
 }
+
+=======
+}
+>>>>>>> df0cdc6b77dd52533244c1f38ac3fb30720c67f1
 .playButton a{
     text-decoration: none;
     color: black;
@@ -74,6 +84,14 @@ body{
     border-radius: 8px;
 }
 
+<<<<<<< HEAD
+.playButton a:hover{
+    color: white;
+    background-color: red;
+}
+
+=======
+>>>>>>> df0cdc6b77dd52533244c1f38ac3fb30720c67f1
 /* Options Button */
 .optionsButton{
     transition: transform 0.1s ease;
@@ -88,12 +106,25 @@ body{
 
 .optionsButton:hover{
     transform: scale(1.1);
+<<<<<<< HEAD
+    background-color: red;
+=======
+>>>>>>> df0cdc6b77dd52533244c1f38ac3fb30720c67f1
 }
 
 .optionsButton a{
     text-decoration: none;
     color: black;
 }
+<<<<<<< HEAD
+
+.optionsButton a:hover{
+    color: white;
+    background-color: red;
+}
+
+=======
+>>>>>>> df0cdc6b77dd52533244c1f38ac3fb30720c67f1
 /* Rules Button */
 .rulesButton{
     transition: transform 0.1s ease;
@@ -108,9 +139,21 @@ body{
 
 .rulesButton:hover{
     transform: scale(1.1);
+<<<<<<< HEAD
+    background-color: red;
+=======
+>>>>>>> df0cdc6b77dd52533244c1f38ac3fb30720c67f1
 }
 
 .rulesButton a{
     text-decoration: none;
     color: black;
+<<<<<<< HEAD
+}
+
+.rulesButton a:hover{
+    color: white;
+    background-color: red;
+=======
+>>>>>>> df0cdc6b77dd52533244c1f38ac3fb30720c67f1
 }
