@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options</title>
+    <link rel="stylesheet" href="../options/options.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="title-block">
+        <h1 id="headerTitle">Settings</h1>
+    </header>
+
+    <main>
+        <div class = "settings-container">
+            <div class="settings-panel">
+                <div class="settings-features-container">
+                    <button class="feature-button active" data-target="soundEffects">Sound Effects</button>
+                    <button class="feature-button" data-target="music">Music</button>
+                    <button class="feature-button" data-target="graphics">Graphics</button>
+                    <button class="feature-button" data-target="controls">Controls</button>
+                </div>
+
+                <div class="feature-details-container">
+                    <div class="feature-pane" id="soundEffects">
+                        <h2>Sound Effects</h2>
+                        <div class = "slider-container">
+                            <input type="range" min="0" max="100" value="50" class="slider" id="sfxVolume">
+                            <p>Volume: <span id="sfxValue">50</span></p>
+                        </div>
+                    </div>
+
+                    <div class="feature-pane active" id="music">
+                        <h2>Music</h2>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="100" value="50" class="slider" id="musicVolume">
+                            <p>Volume: <span id="musicValue">50</span></p>
+                        </div>
+                    </div>
+
+                    <div class="feature-pane" id="graphics">
+                        <h2>Graphics</h2>
+                        <p>Choose graphics quality and effects here.</p>
+                    </div>
+
+                    <div class="feature-pane" id="controls">
+                        <h2>Controls</h2>
+                        <p>View and change control settings here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "bottom-buttons">
+                <button class="backButton">
+                    <a href="../index.html">
+                        <h2>Back</h2> 
+                    </a>
+                </button>
+
+                <button class="confirmButton" id="confirmButton">
+                    <h2>Confirm</h2>
+                </button>
+            </div>
+        </div>
+            
+    </main>
+
+    <footer class="footer-block">
+        <p id="footerText">2026 &copy; rights reserved</p>
+    </footer>
+
+    <div class="confirm-modal" id="confirmModal">
+        <div class="confirm-modal-content">
+            <p>Settings saved! Go back to the home screen?</p>
+            <button id="confirmModalCancel">Cancel</button>
+            <button id="confirmModalOk">Return</button>
+            
+        </div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>
