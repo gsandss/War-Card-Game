@@ -9,6 +9,11 @@ body{
     transition: background-position 0.1s;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
 /* Header */
 .titleContainer{
     display: flex;
@@ -17,7 +22,7 @@ body{
 }
 
 #headerTitle{
-    font-size: 8rem;
+    font-size: 12rem;
     color: red;
     text-align: center;
     display: flex;

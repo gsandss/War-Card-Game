@@ -26,7 +26,6 @@ main {
     color: red;
     text-align: center;
     display: flex;
-    height: 20px;
     justify-content: center; 
     font-family:fantasy;
     text-shadow: #191212 4px 4px 6px;
@@ -65,6 +64,7 @@ main {
 }
 
 /* Back Button */
+.resetButton,
 .backButton,
 .confirmButton {
     transition: transform 0.3s ease;
@@ -73,7 +73,8 @@ main {
     align-items: center;
     border-radius: 8px;
     font-family: fantasy;
-    width: 90px;
+    font-size: 1rem;
+    width: 100px;
     height: 56px;
     border: 2px solid black;
     background-color: white;
@@ -81,12 +82,14 @@ main {
     padding: 0;
 }
 
+.resetButton:hover,
 .backButton:hover,
 .confirmButton:hover {
     transform: scale(1.05);
     background-color: red;
 }
 
+.resetButton a,
 .backButton a,
 .confirmButton a {
     display: flex;
@@ -100,16 +103,21 @@ main {
     border-radius: 8px;
 }
 
+.resetButton a:hover,
 .backButton a:hover,
 .confirmButton a:hover {
     color: white;
     background-color: transparent;
 }
 
-.backButton a h2,
-.confirmButton a h2 {
+.resetButton h2,
+.confirmButton h2,
+.backButton h2,
+.resetButton a h2,
+.confirmButton a h2,
+.backButton a h2{
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 /* Settings Container */
@@ -119,17 +127,24 @@ main {
     justify-content: center;
     align-items: stretch;
     width: 50%;
-    max-width: 700px;
+    max-width: 750px;
     min-width: 320px;
     margin: 40px auto;
     padding: 20px;
     box-sizing: border-box;
+    background-image: url('../style/images/settingsBack.png');
+    background-size: 100% 110%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .settings-panel {
     display: flex;
     gap: 20px;
     width: 100%;
+    padding: 20px;
+    background: transparent;
+    box-sizing: border-box;
 }
 
 /* Settings Features Container */
@@ -139,7 +154,7 @@ main {
     width: 180px;
     min-width: 150px;
     padding: 20px;
-    gap: 15px;
+    gap: 40px;
     align-items: stretch;
     border-right: 1px solid rgba(0,0,0,0.15);
 }
@@ -178,10 +193,20 @@ main {
 
 .feature-pane {
     display: none;
+    font-size: 1.5rem;
+}
+
+.feature-title{
+    border-bottom: 2px solid black; 
+    width: 75%;
 }
 
 .feature-pane.active {
     display: block;
+}
+
+.volume-scale{
+    font-size: 1rem;
 }
 
 .settings-features-container button {
@@ -194,34 +219,6 @@ main {
     gap: 10px;
     width: 100%;
     max-width: 360px;
-}
-
-.slider{
-    -webkit-appearance: none;
-    width: 100%;
-    height: 8px;
-    border-radius: 4px;
-    background: #ddd;
-    outline: none;
-    opacity: 0.7;
-    transition: opacity .2s;
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-.slider-container p {
-    margin: 0;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-.slider-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    max-width: 320px;
 }
 
 .confirm-modal {
@@ -251,6 +248,7 @@ main {
 .confirm-modal-content p {
     margin: 0 0 16px;
     font-family: fantasy;
+    font-size: 1.5rem;
 }
 
 .confirm-modal-content button {
@@ -259,6 +257,7 @@ main {
     background: white;
     color: black;
     font-family: fantasy;
+    font-size: 2rem;
     cursor: pointer;
     border-radius: 8px;
 }
@@ -268,12 +267,20 @@ main {
     color: white;
 }
 
-.slider{
-    -webkit-appearance: none;
+/* Slider */
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     width: 100%;
-    height: 8px;
+    max-width: 320px;
+}
+
+.slider{
+    width: 100%;
+    height:10px;
     border-radius: 4px;
-    background: #ddd;
+    background: gray;
     outline: none;
     opacity: 0.7;
     transition: opacity .2s;
@@ -285,6 +292,7 @@ main {
 
 .slider-container p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     white-space: nowrap;
 }
+
