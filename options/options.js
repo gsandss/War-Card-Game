@@ -47,6 +47,8 @@ const resetButton = document.getElementById("resetButton");
 let pendingModalAction = null;
 const initialMusicValue = slider ? slider.value : null;
 const initialSfxValue = sfxSlider ? sfxSlider.value : null;
+const initialCardStyle = localStorage.getItem("cardStyle");
+const initialBackground = localStorage.getItem("background");
 
 function openConfirmModal(message, okLabel, action) {
   if (!confirmModal || !confirmModalOk || !confirmModalText) return;
@@ -78,13 +80,21 @@ function resetSettings() {
   if (bgMusic) {
     bgMusic.volume = 0.5;
   }
+  
+  // Reset graphics buttons
+  graphicsButtons.forEach(button => {
+    button.classList.remove("active");
+  });
+  
   localStorage.clear();
 }
 
 function hasUnsavedChanges() {
   const musicChanged = slider && slider.value !== initialMusicValue;
   const sfxChanged = sfxSlider && sfxSlider.value !== initialSfxValue;
-  return musicChanged || sfxChanged;
+  const cardStyleChanged = localStorage.getItem("cardStyle") !== initialCardStyle;
+  const backgroundChanged = localStorage.getItem("background") !== initialBackground;
+  return musicChanged || sfxChanged || cardStyleChanged || backgroundChanged;
 }
 
 function handleBackButtonClick(event) {
@@ -137,3 +147,83 @@ if (bgMusic && sliderMusic) {
   });
 }
 
+function saveSettings() {
+  if (slider) {
+    localStorage.setItem("musicVolume", slider.value);
+  }
+  if (sfxSlider) {
+    localStorage.setItem("sfxVolume", sfxSlider.value);
+  }
+  // Graphics settings are saved when buttons are clicked
+}
+
+function loadSettings() {
+  const savedMusicVolume = localStorage.getItem("musicVolume");
+  const savedSfxVolume = localStorage.getItem("sfxVolume");
+  if (savedMusicVolume !== null && slider) {
+    slider.value = savedMusicVolume;
+    if (output) {
+      output.innerHTML = savedMusicVolume;
+    }
+    if (bgMusic) {
+      bgMusic.volume = savedMusicVolume / 100;
+    }
+  }
+  if (savedSfxVolume !== null && sfxSlider) {
+    sfxSlider.value = savedSfxVolume;
+    if (sfxOutput) {
+      sfxOutput.innerHTML = savedSfxVolume;
+    }
+  }
+  
+  // Load graphics settings
+  const savedCardStyle = localStorage.getItem("cardStyle");
+  const savedBackground = localStorage.getItem("background");
+  
+  if (savedCardStyle) {
+    const styleButton = document.querySelector(`.graphics-button[data-style="${savedCardStyle}"]`);
+    if (styleButton) {
+      styleButton.classList.add("active");
+    }
+  }
+  
+  if (savedBackground) {
+    const bgButton = document.querySelector(`.graphics-button[data-bg="${savedBackground}"]`);
+    if (bgButton) {
+      bgButton.classList.add("active");
+    }
+  } 
+}
+
+window.addEventListener("load", loadSettings);
+
+// Graphics button handling
+const graphicsButtons = document.querySelectorAll(".graphics-button");
+
+function setActiveGraphicsButton(button) {
+  const dataAttr = button.hasAttribute('data-style') ? 'data-style' : 'data-bg';
+  const value = button.getAttribute(dataAttr);
+  
+  // Remove active class from all buttons in the same group
+  graphicsButtons.forEach(btn => {
+    if (btn.getAttribute(dataAttr) !== null) {
+      btn.classList.remove("active");
+    }
+  });
+  
+  // Add active class to the clicked button
+  button.classList.add("active");
+  
+  // Save the selection
+  if (dataAttr === 'data-style') {
+    localStorage.setItem("cardStyle", value);
+  } else if (dataAttr === 'data-bg') {
+    localStorage.setItem("background", value);
+  }
+}
+
+graphicsButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    setActiveGraphicsButton(button);
+  });
+});
