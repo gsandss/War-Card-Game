@@ -49,6 +49,9 @@ Three main navigation options:
 
 ---
 
+## 🌐 Live Demo
+https://gsandss.github.io/War-Card-Game/
+
 ## 🔨 Future Plans
 - 🃏 Full game logic implementation
 - 📖 Complete rules page
