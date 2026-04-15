@@ -1,13 +1,65 @@
-# War-Card-Game
-A simple browser-based implementation of the card game War.
+# 🃏 War Card Game
 
-<img width="1919" height="908" alt="{0F4640BE-70F6-4ACE-8191-D21CFADC3CBE}" src="https://github.com/user-attachments/assets/3e8cb0d2-1f7a-4e24-8d74-2829d979d822" />
+## 🎮 Overview
+Recreation of the traditional War card game in an immersive web experience — with a modern twist.
 
-# 🎮 Overview
-Recreation of the traditional War card game in an immersive web experience. The interface includes a unique atmosphere, blending together battlefields and cards.
-The website is build with:
+<img width="959" height="454" alt="War Game Screenshot" src="https://github.com/user-attachments/assets/3e8cb0d2-1f7a-4e24-8d74-2829d979d822" />
+
+---
+
+## 💻 Technologies
 - HTML
 - CSS
-- Javascript
+- JavaScript
 
+---
 
+## 🏗️ Application Structure
+
+### 🏠 Home Screen
+Three main navigation options:
+- 📕 **Rules**
+- ▶️ **Play**
+- ⚙️ **Settings**
+
+---
+
+### ⚙️ Settings Screen
+
+#### 🔉 Audio Controls
+- Music volume slider
+- Sound effects slider
+
+#### 🎨 Graphics Settings
+- Card styles
+- Background themes
+
+#### 🕹️ Controls
+- Placeholder for future customization
+
+---
+
+### 📖 Rules Page
+- 🚧 In progress
+
+---
+
+## 🔥 Gameplay
+- 🚧 In progress
+
+---
+
+## 🔨 Future Plans
+- 🃏 Full game logic implementation
+- 📖 Complete rules page
+- 🎮 Control customization
+- 🌐 Multiplayer support
+- 📱 Mobile optimization
+- 🎵 Background music integration
+
+---
+
+## 👨‍💻 Author
+**Gavin Sands**  
+Iowa State University  
+Computer Science | Minor in AI & Applied AI  
