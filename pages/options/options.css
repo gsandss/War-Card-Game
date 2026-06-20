@@ -2,7 +2,7 @@
 
 /* General */
 body{   
-    background-image: url("../style/images/homeBackground.png");
+    background-image: url("../../style/images/homeBackground.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,7 +87,6 @@ main {
 .confirmButton:hover {
     transform: scale(1.05);
     background-color: red;
-    color: white;
 }
 
 .resetButton a,
@@ -133,7 +132,7 @@ main {
     margin: 40px auto;
     padding: 20px;
     box-sizing: border-box;
-    background-image: url('../style/images/settingsBack.png');
+    background-image: url('../../style/images/settingsBack.png');
     background-size: 100% 110%;
     background-position: center center;
     background-repeat: no-repeat;

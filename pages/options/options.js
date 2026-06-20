@@ -102,7 +102,7 @@ function handleBackButtonClick(event) {
   if (hasUnsavedChanges()) {
     openConfirmModal("You have unsaved changes. Leave without saving?", "Leave", "leave");
   } else {
-    window.location.href = "../index.html";
+    window.location.href = "../../index.html";
   }
 }
 
@@ -125,7 +125,7 @@ if (resetButton) {
 if (confirmModalOk) {
   confirmModalOk.addEventListener("click", () => {
     if (pendingModalAction === "confirm" || pendingModalAction === "leave") {
-      window.location.href = "../index.html";
+      window.location.href = "../../index.html";
     } else if (pendingModalAction === "reset") {
       resetSettings();
       closeConfirmModal();
