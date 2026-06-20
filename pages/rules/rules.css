@@ -4,6 +4,7 @@ body {
     background: #0c0c0c;
     color: white;
     font-family: fantasy, sans-serif;
+    background-image: url("../../style/images/homeBackground.png");
 }
 
 .title-block {
